@@ -1,0 +1,5 @@
+C:\Users\username\code\apollo\nextjs-demo>npm -v
+6.14.9
+
+C:\Users\username\code\apollo\nextjs-demo>node -v
+v15.3.0

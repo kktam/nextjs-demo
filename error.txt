@@ -1,0 +1,337 @@
+C:\Users\username\code\apollo\nextjs-demo>yarn dev
+yarn run v1.16.0
+$ next dev
+(node:3748) [DEP0148] DeprecationWarning: Use of deprecated folder mapping "./" in the "exports" field module resolution of the package at C:\Users\username\code\apollo\nextjs-demo\node_modules\postcss\package.json.
+Update this package.json to use a subpath pattern like "./*".
+(Use `node --trace-deprecation ...` to show where the warning was created)
+ready - started server on http://localhost:3000
+event - compiled successfully
+event - build page: /
+wait  - compiling...
+event - compiled successfully
+C:\Users\username\code\apollo\nextjs-demo\node_modules\@azure\core-http\dist\index.js:2387
+        var _this = _super.call(this, message) || this;
+                           ^
+
+RestError
+    at new RestError (C:\Users\username\code\apollo\nextjs-demo\node_modules\@azure\core-http\dist\index.js:2387:28)
+    at handleErrorResponse (C:\Users\username\code\apollo\nextjs-demo\node_modules\@azure\core-http\dist\index.js:3238:17)
+    at C:\Users\username\code\apollo\nextjs-demo\node_modules\@azure\core-http\dist\index.js:3177:18
+    at processTicksAndRejections (node:internal/process/task_queues:93:5) {
+  code: undefined,
+  statusCode: 404,
+  request: WebResource {
+    streamResponseBody: false,
+    url: 'https://products.azconfig.io/kv/OAUTH_APP_ID?api-version=1.0',
+    method: 'GET',
+    headers: HttpHeaders {
+      _headersMap: {
+        'content-type': {
+          name: 'content-type',
+          value: 'application/json; charset=utf-8'
+        },
+        'user-agent': {
+          name: 'user-agent',
+          value: 'azsdk-js-app-configuration/1.1.0 core-http/1.2.0 Node/v15.3.0 OS/(x64-Windows_NT-10.0.18363)'
+        },
+        'x-ms-client-request-id': {
+          name: 'x-ms-client-request-id',
+          value: '96fecb1c-6c6d-4d0c-9505-2fa8cc19a49d'
+        },
+        'x-ms-date': { name: 'x-ms-date', value: 'Mon, 30 Nov 2020 02:53:18 GMT' },
+        'x-ms-content-sha256': {
+          name: 'x-ms-content-sha256',
+          value: '47DEQpj8HBSa+/TImW+5JCeuQeRkm5NMpJWZG3hSuFU='
+        },
+        authorization: {
+          name: 'authorization',
+          value: 'HMAC-SHA256 Credential=6gb5-l2-s0:mKLM7myUSoCITapKr7KF, SignedHeaders=x-ms-date;host;x-ms-content-sha256, Signature=BacNL0kDKfCYuurBJsqZpSG+OnLxuXPsrVsuWix+FAE='
+        },
+        cookie: { name: 'Cookie', value: '' }
+      }
+    },
+    body: undefined,
+    query: undefined,
+    formData: undefined,
+    withCredentials: false,
+    abortSignal: undefined,
+    timeout: 0,
+    onUploadProgress: undefined,
+    onDownloadProgress: undefined,
+    proxySettings: undefined,
+    keepAlive: undefined,
+    decompressResponse: undefined,
+    requestId: '96fecb1c-6c6d-4d0c-9505-2fa8cc19a49d',
+    operationSpec: {
+      httpMethod: 'GET',
+      path: 'kv/{key}',
+      urlParameters: [
+        {
+          parameterPath: 'key',
+          mapper: { required: true, serializedName: 'key', type: [Object] }
+        }
+      ],
+      queryParameters: [
+        {
+          parameterPath: [ 'options', 'label' ],
+          mapper: { serializedName: 'label', type: [Object] }
+        },
+        {
+          parameterPath: 'apiVersion',
+          mapper: {
+            required: true,
+            serializedName: 'api-version',
+            type: [Object]
+          }
+        },
+        {
+          parameterPath: [ 'options', 'select' ],
+          mapper: { serializedName: '$Select', type: [Object] },
+          collectionFormat: ','
+        }
+      ],
+      headerParameters: [
+        {
+          parameterPath: 'syncToken',
+          mapper: { serializedName: 'Sync-Token', type: [Object] }
+        },
+        {
+          parameterPath: [ 'options', 'acceptDatetime' ],
+          mapper: { serializedName: 'Accept-Datetime', type: [Object] }
+        },
+        {
+          parameterPath: [ 'options', 'ifMatch' ],
+          mapper: { serializedName: 'If-Match', type: [Object] }
+        },
+        {
+          parameterPath: [ 'options', 'ifNoneMatch' ],
+          mapper: { serializedName: 'If-None-Match', type: [Object] }
+        }
+      ],
+      responses: {
+        '200': {
+          bodyMapper: { serializedName: 'KeyValue', type: [Object] },
+          headersMapper: { serializedName: 'getkeyvalue-headers', type: [Object] }
+        },
+        '304': {
+          headersMapper: { serializedName: 'getkeyvalue-headers', type: [Object] }
+        },
+        default: { bodyMapper: { serializedName: 'Error', type: [Object] } }
+      },
+      serializer: Serializer {
+        modelMappers: [Object: null prototype] {
+          Key: { serializedName: 'Key', type: [Object] },
+          KeyValue: { serializedName: 'KeyValue', type: [Object] },
+          Label: { serializedName: 'Label', type: [Object] },
+          ErrorModel: { serializedName: 'Error', type: [Object] },
+          KeyListResult: { serializedName: 'KeyListResult', type: [Object] },
+          KeyValueListResult: { serializedName: 'KeyValueListResult', type: [Object] },
+          LabelListResult: { serializedName: 'LabelListResult', type: [Object] },
+          GetKeysHeaders: { serializedName: 'getkeys-headers', type: [Object] },
+          CheckKeysHeaders: { serializedName: 'checkkeys-headers', type: [Object] },
+          GetKeyValuesHeaders: { serializedName: 'getkeyvalues-headers', type: [Object] },
+          CheckKeyValuesHeaders: { serializedName: 'checkkeyvalues-headers', type: [Object] },
+          GetKeyValueHeaders: { serializedName: 'getkeyvalue-headers', type: [Object] },
+          PutKeyValueHeaders: { serializedName: 'putkeyvalue-headers', type: [Object] },
+          DeleteKeyValueHeaders: { serializedName: 'deletekeyvalue-headers', type: [Object] },
+          CheckKeyValueHeaders: { serializedName: 'checkkeyvalue-headers', type: [Object] },
+          GetLabelsHeaders: { serializedName: 'getlabels-headers', type: [Object] },
+          CheckLabelsHeaders: { serializedName: 'checklabels-headers', type: [Object] },
+          PutLockHeaders: { serializedName: 'putlock-headers', type: [Object] },
+          DeleteLockHeaders: { serializedName: 'deletelock-headers', type: [Object] },
+          GetRevisionsHeaders: { serializedName: 'getrevisions-headers', type: [Object] },
+          CheckRevisionsHeaders: { serializedName: 'checkrevisions-headers', type: [Object] }
+        },
+        isXML: undefined
+      }
+    }
+  },
+  response: {
+    headers: HttpHeaders {
+      _headersMap: {
+        'access-control-allow-credentials': { name: 'access-control-allow-credentials', value: 'true' },
+        'access-control-allow-origin': { name: 'access-control-allow-origin', value: '*' },
+        'access-control-expose-headers': {
+          name: 'access-control-expose-headers',
+          value: 'DNT, X-CustomHeader, Keep-Alive, User-Agent, X-Requested-With, If-Modified-Since, Cache-Control, Content-Type, Authorization, x-ms-client-request-id, x-ms-useragent, x-ms-content-sha256, x-ms-date, host, Accept, Accept-Datetime, Date, If-Match, If-None-Match, Sync-Token, x-ms-return-client-request-id, ETag, Last-Modified, Link, Memento-Datetime, retry-after-ms, x-ms-request-id, x-ms-client-session-id, x-ms-effective-locale, WWW-Authenticate'
+        },
+        connection: { name: 'connection', value: 'close' },
+        'content-length': { name: 'content-length', value: '0' },
+        date: { name: 'date', value: 'Mon, 30 Nov 2020 02:52:25 GMT' },
+        server: { name: 'server', value: 'openresty/1.17.8.2' },
+        'strict-transport-security': {
+          name: 'strict-transport-security',
+          value: 'max-age=15724800; includeSubDomains'
+        },
+        'x-ms-correlation-request-id': {
+          name: 'x-ms-correlation-request-id',
+          value: '38f2de5a-375e-4177-b102-5619f00fa248'
+        },
+        'x-ms-request-id': {
+          name: 'x-ms-request-id',
+          value: '38f2de5a-375e-4177-b102-5619f00fa248'
+        },
+        'x-ms-tenant-name': { name: 'x-ms-tenant-name', value: 'products' }
+      }
+    },
+    request: WebResource {
+      streamResponseBody: false,
+      url: 'https://products.azconfig.io/kv/OAUTH_APP_ID?api-version=1.0',
+      method: 'GET',
+      headers: HttpHeaders {
+        _headersMap: {
+          'content-type': {
+            name: 'content-type',
+            value: 'application/json; charset=utf-8'
+          },
+          'user-agent': {
+            name: 'user-agent',
+            value: 'azsdk-js-app-configuration/1.1.0 core-http/1.2.0 Node/v15.3.0 OS/(x64-Windows_NT-10.0.18363)'
+          },
+          'x-ms-client-request-id': {
+            name: 'x-ms-client-request-id',
+            value: '96fecb1c-6c6d-4d0c-9505-2fa8cc19a49d'
+          },
+          'x-ms-date': { name: 'x-ms-date', value: 'Mon, 30 Nov 2020 02:53:18 GMT' },
+          'x-ms-content-sha256': {
+            name: 'x-ms-content-sha256',
+            value: '47DEQpj8HBSa+/TImW+5JCeuQeRkm5NMpJWZG3hSuFU='
+          },
+          authorization: {
+            name: 'authorization',
+            value: 'HMAC-SHA256 Credential=6gb5-l2-s0:mKLM7myUSoCITapKr7KF, SignedHeaders=x-ms-date;host;x-ms-content-sha256, Signature=BacNL0kDKfCYuurBJsqZpSG+OnLxuXPsrVsuWix+FAE='
+          },
+          cookie: { name: 'Cookie', value: '' }
+        }
+      },
+      body: undefined,
+      query: undefined,
+      formData: undefined,
+      withCredentials: false,
+      abortSignal: undefined,
+      timeout: 0,
+      onUploadProgress: undefined,
+      onDownloadProgress: undefined,
+      proxySettings: undefined,
+      keepAlive: undefined,
+      decompressResponse: undefined,
+      requestId: '96fecb1c-6c6d-4d0c-9505-2fa8cc19a49d',
+      operationSpec: {
+        httpMethod: 'GET',
+        path: 'kv/{key}',
+        urlParameters: [ { parameterPath: 'key', mapper: [Object] } ],
+        queryParameters: [
+          { parameterPath: [Array], mapper: [Object] },
+          { parameterPath: 'apiVersion', mapper: [Object] },
+          {
+            parameterPath: [Array],
+            mapper: [Object],
+            collectionFormat: ','
+          }
+        ],
+        headerParameters: [
+          { parameterPath: 'syncToken', mapper: [Object] },
+          { parameterPath: [Array], mapper: [Object] },
+          { parameterPath: [Array], mapper: [Object] },
+          { parameterPath: [Array], mapper: [Object] }
+        ],
+        responses: {
+          '200': { bodyMapper: [Object], headersMapper: [Object] },
+          '304': { headersMapper: [Object] },
+          default: { bodyMapper: [Object] }
+        },
+        serializer: Serializer {
+          modelMappers: [Object: null prototype] {
+            Key: [Object],
+            KeyValue: [Object],
+            Label: [Object],
+            ErrorModel: [Object],
+            KeyListResult: [Object],
+            KeyValueListResult: [Object],
+            LabelListResult: [Object],
+            GetKeysHeaders: [Object],
+            CheckKeysHeaders: [Object],
+            GetKeyValuesHeaders: [Object],
+            CheckKeyValuesHeaders: [Object],
+            GetKeyValueHeaders: [Object],
+            PutKeyValueHeaders: [Object],
+            DeleteKeyValueHeaders: [Object],
+            CheckKeyValueHeaders: [Object],
+            GetLabelsHeaders: [Object],
+            CheckLabelsHeaders: [Object],
+            PutLockHeaders: [Object],
+            DeleteLockHeaders: [Object],
+            GetRevisionsHeaders: [Object],
+            CheckRevisionsHeaders: [Object]
+          },
+          isXML: undefined
+        }
+      }
+    },
+    status: 404,
+    readableStreamBody: undefined,
+    bodyAsText: ''
+  },
+  details: {}
+}
+error Command failed with exit code 1.
+info Visit https://yarnpkg.com/en/docs/cli/run for documentation about this command.
+
+C:\Users\username\code\apollo\nextjs-demo>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
